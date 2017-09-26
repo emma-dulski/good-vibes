@@ -8,7 +8,7 @@ void setup() {
 void loop() {
  
   boolean button;
-  button = digitalRead(2);
+  button = digitalRead(12);
 // Serial.printIn(button);
 // delay(100);
 
@@ -17,16 +17,16 @@ void loop() {
 //}
   if (button == HIGH){
 
-    analogWrite( 3, 255 );
+    analogWrite( 13, 255 );
     delay(80);
 
-    analogWrite( 3 , 0 );
+    analogWrite( 13 , 0 );
     delay(200);
 
-    analogWrite( 3 , 245 );
+    analogWrite( 13 , 245 );
     delay(80);
 
-    analogWrite( 3 , 0 );
-    delay(200)
-  }
+    analogWrite( 13 , 0 );
+    delay(700);
+  }  }
 
