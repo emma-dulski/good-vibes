@@ -1,5 +1,7 @@
-int lastTimeItHappened = 0;              // The clock time in millis()
-int howLongItsBeen;                         // A calculated value
+int lastTimeItHappened = 0;
+int lastTimeItHappened2 = 0;
+int howLongItsBeen;
+int howLongItsBeen2;
 const int ledPin = 13;
 int buttonState = 0;         // variable for reading the pushbutton status
 int buttonState2 = 0;
@@ -42,17 +44,17 @@ if (buttonState == HIGH && buttonState2 == LOW) {
   lastTimeItHappened = millis ();}
 }
 
- if (buttonState2 == HIGH && buttonState == LOW) {
+else if (buttonState2 == HIGH && buttonState == LOW) {
   Serial.println("both");
   analogWrite(ledPin2, brightness);
- howLongItsBeen = millis() - lastTimeItHappened;
- if ( howLongItsBeen >= howLongToWait ) {
+ howLongItsBeen2 = millis() - lastTimeItHappened2;
+ if ( howLongItsBeen2 >= howLongToWait ) {
    // do it (again)
    brightness = brightness + fadeAmount;
     if (brightness <= 0 || brightness >= 255) {
     fadeAmount = -fadeAmount;
     }
-    lastTimeItHappened = millis();
+    lastTimeItHappened2 = millis();
  }
  
   howLongItsBeen = millis() - lastTimeItHappened;
