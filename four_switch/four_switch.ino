@@ -25,8 +25,8 @@
 // constants won't change. They're used here to set pin numbers:
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  13;      // the number of the LED pin
-const int buttonPin2 = 3;
-const int ledPin2 = 4;
+const int buttonPin2 = 4;
+const int ledPin2 = 3;
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by
 
@@ -64,7 +64,8 @@ void loop() {
   delay(30);
     
  }   else if (buttonState2 == HIGH && buttonState == HIGH ) {
-    digitalWrite(ledPin2, HIGH);{
+    digitalWrite(ledPin2, HIGH);
+    {
 
     analogWrite( 4, 255 );
     delay(80);
