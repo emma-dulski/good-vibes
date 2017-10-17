@@ -54,8 +54,8 @@ void loop() {
       brightness = min(brightness,255);
       brightness = max(brightness,0);
       lastTimeItHappenedLED = millis();
-    } else {
-      brightness = 0;
+//    } else {
+//      brightness = 0;
     }
     // set the new brightness
     analogWrite(ledPin, brightness);
@@ -95,6 +95,7 @@ Serial.println("vibe only");
     Serial.println("off");
     // boring mode, no vibeing
     digitalWrite(vibePin, LOW);
+    digitalWrite(ledPin, LOW);
   }
   
 }
